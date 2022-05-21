@@ -50,20 +50,49 @@ let genders = [
     "AttackHelicopter",
     "biGenderSexualATEIST"
 ]
+let sposobnosti = [
+    "Слепой",
+    "Глухой",
+    "Потерял ногу во Вьетнаме",
+    "Диабетик",
+    "Укусил радиоактивного паука",
+    "Некрофил",
+    "Сатанист",
+    "Зоофил",
+    "Педофил",
+    "Сексуально озабоченный",
+    "Живёт с бабушкой",
+    "При собянине",
+];
 
-setInterval(function (){
+
+
+let knopka = document.querySelector('#knopka')
+let kart = document.querySelector('.kart')
+let ostalnoe = document.querySelector('.ostalnoe')
+
+
+
+
+knopka.addEventListener('click', function (){
+    kart.innerHTML = ''
+    ostalnoe.innerHTML = ''
+
+
     let gender = genders[Math.floor(Math.random()* (genders.length))];
 
     if (gender === 'AttackHelicopter' ){
         let randIndexNames = Math.floor(Math.random() * (manMoment.names.length))
         let randIndexfam = Math.floor(Math.random() * (manMoment.fam.length))
-        console.log('Это атак хеликоптер', manMoment.fam[randIndexfam], manMoment.names[randIndexNames])
+        let voz = Math.floor(Math.random() * 100)
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + manMoment.fam[randIndexfam] + ' ' + manMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Аттак хеликоптер' + '<br>' + 'Возраст ' + voz
     }else if (gender === 'biGenderSexualATEIST'){
         let randIndexNames = Math.floor(Math.random() * (womanMoment.names.length))
         let randIndexfam = Math.floor(Math.random() * (womanMoment.fam.length))
-        console.error('Это бигендерный сексуальный атеист', womanMoment.fam[randIndexfam], womanMoment.names[randIndexNames])
+        let voz = Math.floor(Math.random() * 100)
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + womanMoment.fam[randIndexfam] + ' ' + womanMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Бигендер сексуал атеист' + '<br>' + 'Возраст ' + voz
     }
-}, 500)
+})
 
 
 
