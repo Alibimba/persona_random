@@ -50,7 +50,8 @@ let genders = [
     "AttackHelicopter",
     "biGenderSexualATEIST"
 ]
-let sposobnosti = [
+let sposobnosti = {
+    spo: [
     "Слепой",
     "Глухой",
     "Потерял ногу во Вьетнаме",
@@ -63,7 +64,7 @@ let sposobnosti = [
     "Сексуально озабоченный",
     "Живёт с бабушкой",
     "При собянине",
-];
+]}
 
 
 
@@ -84,13 +85,15 @@ knopka.addEventListener('click', function (){
     if (gender === 'AttackHelicopter' ){
         let randIndexNames = Math.floor(Math.random() * (manMoment.names.length))
         let randIndexfam = Math.floor(Math.random() * (manMoment.fam.length))
+        let randosob = Math.floor(Math.random() * (sposobnosti.spo.length))
         let voz = Math.floor(Math.random() * 100)
-        ostalnoe.innerHTML = 'Фамилия and имя: ' + manMoment.fam[randIndexfam] + ' ' + manMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Аттак хеликоптер' + '<br>' + 'Возраст ' + voz
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + manMoment.fam[randIndexfam] + ' ' + manMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Аттак хеликоптер' + '<br>' + 'Возраст ' + voz + '<br>' + 'Уникальные особенности ' + sposobnosti.spo[randosob]
     }else if (gender === 'biGenderSexualATEIST'){
         let randIndexNames = Math.floor(Math.random() * (womanMoment.names.length))
         let randIndexfam = Math.floor(Math.random() * (womanMoment.fam.length))
+        let randosob = Math.floor(Math.random() * (sposobnosti.spo.length))
         let voz = Math.floor(Math.random() * 100)
-        ostalnoe.innerHTML = 'Фамилия and имя: ' + womanMoment.fam[randIndexfam] + ' ' + womanMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Бигендер сексуал атеист' + '<br>' + 'Возраст ' + voz
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + womanMoment.fam[randIndexfam] + ' ' + womanMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Бигендер сексуал атеист' + '<br>' + 'Возраст ' + voz + '<br>' + 'Уникальные особенности ' + sposobnosti.spo[randosob]
     }
 })
 
