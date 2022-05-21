@@ -1,0 +1,23 @@
+body{
+    display: flex;
+    justify-content: center;
+    background-image: url("img/mask.png");
+
+}
+.vse{
+    display: flex;
+    background: beige;
+    width: 500px;
+    height: 500px;
+}
+.pole{
+    width: 800px;
+    height: 600px;
+    background: #6c5245;
+    margin-top: 50px;
+    border: 15px outset #6e0101;
+    box-shadow: 10px 10px 10px 10px #410000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
