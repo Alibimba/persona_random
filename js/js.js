@@ -65,6 +65,15 @@ let sposobnosti = {
     "Живёт с бабушкой",
     "При собянине",
 ]}
+let avatar = {
+    kar:[
+        '<img src="css/img/img.png" width="200px" height="200px" id="fotka">',
+        '<img src="css/img/ggg.JPG" width="200px" height="200px" id="fotka">',
+        '<img src="css/img/mmm.JPG" width="200px" height="200px" id="fotka">',
+        '<img src="css/img/vvv.JPG" width="200px" height="200px" id="fotka">',
+        '<img src="css/img/sss.JPG" width="200px" height="200px" id="fotka">',
+    ]
+}
 
 
 
@@ -87,13 +96,17 @@ knopka.addEventListener('click', function (){
         let randIndexfam = Math.floor(Math.random() * (manMoment.fam.length))
         let randosob = Math.floor(Math.random() * (sposobnosti.spo.length))
         let voz = Math.floor(Math.random() * 100)
-        ostalnoe.innerHTML = 'Фамилия and имя: ' + manMoment.fam[randIndexfam] + ' ' + manMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Аттак хеликоптер' + '<br>' + 'Возраст ' + voz + '<br>' + 'Уникальные особенности ' + sposobnosti.spo[randosob]
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + manMoment.fam[randIndexfam] + ' ' + manMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Аттак хеликоптер' + '<br>' + 'Возраст: ' + voz + '<br>'  + 'Уникальные особенности: ' + sposobnosti.spo[randosob]
+        let randavatar = Math.floor(Math.random() * (avatar.kar.length))
+        kart.innerHTML = avatar.kar[randavatar]
     }else if (gender === 'biGenderSexualATEIST'){
         let randIndexNames = Math.floor(Math.random() * (womanMoment.names.length))
         let randIndexfam = Math.floor(Math.random() * (womanMoment.fam.length))
         let randosob = Math.floor(Math.random() * (sposobnosti.spo.length))
         let voz = Math.floor(Math.random() * 100)
-        ostalnoe.innerHTML = 'Фамилия and имя: ' + womanMoment.fam[randIndexfam] + ' ' + womanMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Бигендер сексуал атеист' + '<br>' + 'Возраст ' + voz + '<br>' + 'Уникальные особенности ' + sposobnosti.spo[randosob]
+        ostalnoe.innerHTML = 'Фамилия and имя: ' + womanMoment.fam[randIndexfam] + ' ' + womanMoment.names[randIndexNames] + '<br>' + 'Гендер: ' + 'Бигендер сексуал атеист' + '<br>' + 'Возраст: ' + voz + '<br>' + 'Уникальные особенности: ' + sposobnosti.spo[randosob]
+        let randavatar = Math.floor(Math.random() * (avatar.kar.length))
+        kart.innerHTML = avatar.kar[randavatar]
     }
 })
 

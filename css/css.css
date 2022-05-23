@@ -12,7 +12,7 @@ body{
 }
 .pole{
     width: 800px;
-    height: 600px;
+    height: 400px;
     background: #6c5245;
     margin-top: 50px;
     border: 15px outset #6e0101;
@@ -23,23 +23,26 @@ body{
     align-items: center;
 }
 .btn{
-    background: black;
+    
     width: 100%;
-    height: 50px;
+    height: 35px;
     display: flex;
     justify-content: center;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 .kart{
-    background: #8a6b6b;
+    
     width: 200px;
     height: 200px;
     display: flex;
 }
 .ostalnoe{
-    background: black;
+    
     width: 100%;
     height: 100%;
     color: white;
+    font-size: 24px;
+    font-weight: bold;
+
 }
